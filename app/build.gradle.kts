@@ -1,4 +1,6 @@
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+import java.io.FileInputStream
+import java.util.*
 
 plugins {
     alias(libs.plugins.android.application)
@@ -6,16 +8,19 @@ plugins {
     alias(libs.plugins.kotlin.compose)
 }
 
+val gradleProperties = Properties()
+gradleProperties.load(FileInputStream(rootProject.file("gradle.properties")))
+
 android {
-    namespace = "com.example.compose"
-    compileSdk = 36
+    namespace = gradleProperties.getProperty("namespace")
+    compileSdk = gradleProperties.getProperty("compileSdk").toInt()
 
     defaultConfig {
-        applicationId = "com.example.compose"
-        minSdk = 24
-        targetSdk = 36
-        versionCode = 1
-        versionName = "1.0"
+        applicationId = gradleProperties.getProperty("namespace")
+        minSdk = gradleProperties.getProperty("minSdk").toInt()
+        targetSdk = gradleProperties.getProperty("targetSdk").toInt()
+        versionCode = gradleProperties.getProperty("versionCode").toInt()
+        versionName = gradleProperties.getProperty("versionName")
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -27,12 +32,12 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
     kotlin {
         compilerOptions {
-            jvmTarget = JvmTarget.JVM_11
+            jvmTarget = JvmTarget.JVM_17
         }
     }
     buildFeatures {
