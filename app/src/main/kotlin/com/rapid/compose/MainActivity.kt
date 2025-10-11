@@ -28,7 +28,7 @@ import com.rapid.compose.ui.theme.ComposeTheme
  */
 class MainActivity : ComponentActivity() {
 
-    private val appContainer by lazy { (application as MyApplication).appContainer }
+    private val appContainer by lazy { (application as MainApplication).appContainer }
 
     private val viewModel: MainViewModel by viewModels {
         MainViewModel.provideFactory(appContainer.homeRepository)

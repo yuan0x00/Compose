@@ -7,7 +7,7 @@ import com.rapid.compose.di.AppContainer
 /**
  * 应用程序入口
  */
-class MyApplication : Application() {
+class MainApplication : Application() {
 
     lateinit var appContainer: AppContainer
         private set
