@@ -41,10 +41,10 @@ internal fun Project.configureAndroidCompose(
                 "androidx-core-ktx",
                 "androidx-lifecycle-runtime-ktx",
                 "androidx-activity-compose",
-                "androidx-ui",
-                "androidx-ui-graphics",
+                "androidx-compose-ui",
+                "androidx-compose-ui-graphics",
                 "androidx-compose-ui-tooling-preview",
-                "androidx-material3",
+                "androidx-compose-material3",
                 "material-icons-extended"
             ).forEach { alias ->
                 add("implementation", libs.findLibrary(alias).get())
@@ -53,9 +53,9 @@ internal fun Project.configureAndroidCompose(
             add("androidTestImplementation", libs.findLibrary("androidx-test-ext-junit").get())
             add("androidTestImplementation", libs.findLibrary("androidx-espresso-core").get())
             add("androidTestImplementation", platform(bom))
-            add("androidTestImplementation", libs.findLibrary("androidx-ui-test-junit4").get())
+            add("androidTestImplementation", libs.findLibrary("androidx-compose-ui-test-junit4").get())
             add("debugImplementation", libs.findLibrary("androidx-compose-ui-tooling").get())
-            add("debugImplementation", libs.findLibrary("androidx-ui-test-manifest").get())
+            add("debugImplementation", libs.findLibrary("androidx-compose-ui-test-manifest").get())
         }
     }
 

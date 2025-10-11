@@ -3,14 +3,10 @@ plugins {
 }
 
 android {
-    namespace = "com.rapid.compose.core.network"
+    namespace = "com.rapid.compose.core.data"
 
     defaultConfig {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-    }
-
-    buildFeatures {
-        buildConfig = true
     }
 
     buildTypes {
@@ -22,9 +18,7 @@ android {
 }
 
 dependencies {
-    api(libs.retrofit)
-    api(libs.kotlinx.serialization)
-    api(libs.retrofit.serialization)
-    api(libs.retrofit2.kotlinx.serialization.converter)
-    api(libs.logging.interceptor)
+    implementation(project(":core:model"))
+    implementation(project(":core:network"))
+    implementation(project(":core:common"))
 }
