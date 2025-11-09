@@ -1,6 +1,6 @@
 package com.rapid.compose.core.data.source.content
 
-import com.rapid.compose.core.model.*
+import com.rapid.compose.core.domain.model.*
 
 interface ContentRemoteDataSource {
     suspend fun getKnowledgeTree(): ApiResponse<List<CategoryNodeBean>>

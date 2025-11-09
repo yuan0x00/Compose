@@ -1,7 +1,7 @@
 package com.rapid.compose.core.data.source.user
 
 import com.rapid.compose.core.data.source.api.UserApiService
-import com.rapid.compose.core.model.*
+import com.rapid.compose.core.domain.model.*
 import com.rapid.compose.core.network.NetworkClient
 
 class UserRemoteDataSourceImpl : UserRemoteDataSource {

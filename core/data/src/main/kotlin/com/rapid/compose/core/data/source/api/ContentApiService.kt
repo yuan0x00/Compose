@@ -1,6 +1,6 @@
 package com.rapid.compose.core.data.source.api
 
-import com.rapid.compose.core.model.*
+import com.rapid.compose.core.domain.model.*
 import retrofit2.http.*
 
 /**

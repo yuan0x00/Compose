@@ -1,7 +1,7 @@
 package com.rapid.compose.core.data.source.home
 
 import com.rapid.compose.core.data.source.api.HomeApiService
-import com.rapid.compose.core.model.*
+import com.rapid.compose.core.domain.model.*
 import com.rapid.compose.core.network.NetworkClient
 
 class HomeRemoteDataSourceImpl : HomeRemoteDataSource {

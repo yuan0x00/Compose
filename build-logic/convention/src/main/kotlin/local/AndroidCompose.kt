@@ -62,6 +62,8 @@ internal fun Project.configureAndroidCompose(
     tasks.withType<KotlinCompile>().configureEach {
         compilerOptions {
             jvmTarget.set(JvmTarget.JVM_17)
+            optIn.add("kotlin.time.ExperimentalTime")
+            optIn.add("androidx.compose.material3.ExperimentalMaterial3Api")
         }
     }
 }

@@ -1,8 +1,8 @@
 package com.rapid.compose.core.data.source.message
 
-import com.rapid.compose.core.model.ApiResponse
-import com.rapid.compose.core.model.MessageBean
-import com.rapid.compose.core.model.PageBean
+import com.rapid.compose.core.domain.model.ApiResponse
+import com.rapid.compose.core.domain.model.MessageBean
+import com.rapid.compose.core.domain.model.PageBean
 
 interface MessageRemoteDataSource {
     suspend fun getUnreadMessageCount(): ApiResponse<Int>

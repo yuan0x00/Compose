@@ -1,9 +1,9 @@
 package com.rapid.compose.core.data.source.auth
 
 import com.rapid.compose.core.data.source.api.AuthApiService
-import com.rapid.compose.core.model.ApiResponse
-import com.rapid.compose.core.model.LoginBean
-import com.rapid.compose.core.model.RegisterBean
+import com.rapid.compose.core.domain.model.ApiResponse
+import com.rapid.compose.core.domain.model.LoginBean
+import com.rapid.compose.core.domain.model.RegisterBean
 import com.rapid.compose.core.network.NetworkClient
 
 class AuthRemoteDataSourceImpl : AuthRemoteDataSource {

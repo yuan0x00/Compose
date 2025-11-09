@@ -30,5 +30,7 @@ rootProject.name = "Compose"
 include(":app")
 include(":core:common")
 include(":core:data")
-include(":core:model")
+include(":core:domain")
 include(":core:network")
+include(":core:storage")
+include(":core:webview")

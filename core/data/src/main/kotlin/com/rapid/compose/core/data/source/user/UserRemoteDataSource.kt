@@ -1,6 +1,6 @@
 package com.rapid.compose.core.data.source.user
 
-import com.rapid.compose.core.model.*
+import com.rapid.compose.core.domain.model.*
 
 interface UserRemoteDataSource {
     suspend fun getUserInfo(): ApiResponse<UserInfoBean>

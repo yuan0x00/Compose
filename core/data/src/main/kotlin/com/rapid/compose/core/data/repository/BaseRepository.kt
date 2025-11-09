@@ -1,6 +1,6 @@
 package com.rapid.compose.core.data.repository
 
-import com.rapid.compose.core.model.ApiResponse
+import com.rapid.compose.core.domain.model.ApiResponse
 import com.rapid.compose.core.network.NetworkError
 import com.rapid.compose.core.network.Resource
 import com.rapid.compose.core.network.safeApiCall

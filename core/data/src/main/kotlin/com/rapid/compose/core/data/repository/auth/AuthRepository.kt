@@ -2,8 +2,8 @@ package com.rapid.compose.core.data.repository.auth
 
 import com.rapid.compose.core.data.repository.BaseRepository
 import com.rapid.compose.core.data.source.auth.AuthRemoteDataSource
-import com.rapid.compose.core.model.LoginBean
-import com.rapid.compose.core.model.RegisterBean
+import com.rapid.compose.core.domain.model.LoginBean
+import com.rapid.compose.core.domain.model.RegisterBean
 import com.rapid.compose.core.network.Resource
 
 class AuthRepository(

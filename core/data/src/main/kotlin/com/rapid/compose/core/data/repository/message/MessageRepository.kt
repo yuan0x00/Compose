@@ -2,8 +2,8 @@ package com.rapid.compose.core.data.repository.message
 
 import com.rapid.compose.core.data.repository.BaseRepository
 import com.rapid.compose.core.data.source.message.MessageRemoteDataSource
-import com.rapid.compose.core.model.MessageBean
-import com.rapid.compose.core.model.PageBean
+import com.rapid.compose.core.domain.model.MessageBean
+import com.rapid.compose.core.domain.model.PageBean
 import com.rapid.compose.core.network.Resource
 
 class MessageRepository(

@@ -1,24 +1,30 @@
 package com.rapid.compose
 
 import android.app.Application
+import android.os.Looper
 import com.rapid.compose.core.network.NetworkClient
-import com.rapid.compose.di.AppContainer
+import com.rapid.compose.core.webview.core.WebViewManager
 
 /**
  * 应用程序入口
  */
 class MainApplication : Application() {
 
-    lateinit var appContainer: AppContainer
-        private set
-
     override fun onCreate() {
         super.onCreate()
-
-        appContainer = AppContainer()
 
         // 初始化网络客户端
         NetworkClient.init(baseUrl = "https://www.wanandroid.com/")
 
+        onIdleHandler()
+
+    }
+
+    private fun onIdleHandler() {
+        Looper.myQueue().addIdleHandler {
+            // 在主线程空闲时预热
+            WebViewManager.getInstance().initPool(this)
+            false // 只执行一次
+        }
     }
 }

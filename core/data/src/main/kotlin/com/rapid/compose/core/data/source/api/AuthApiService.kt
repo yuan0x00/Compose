@@ -1,8 +1,8 @@
 package com.rapid.compose.core.data.source.api
 
-import com.rapid.compose.core.model.ApiResponse
-import com.rapid.compose.core.model.LoginBean
-import com.rapid.compose.core.model.RegisterBean
+import com.rapid.compose.core.domain.model.ApiResponse
+import com.rapid.compose.core.domain.model.LoginBean
+import com.rapid.compose.core.domain.model.RegisterBean
 import retrofit2.http.Field
 import retrofit2.http.FormUrlEncoded
 import retrofit2.http.GET

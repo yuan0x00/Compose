@@ -2,7 +2,7 @@ package com.rapid.compose.core.data.repository.content
 
 import com.rapid.compose.core.data.repository.BaseRepository
 import com.rapid.compose.core.data.source.content.ContentRemoteDataSource
-import com.rapid.compose.core.model.*
+import com.rapid.compose.core.domain.model.*
 import com.rapid.compose.core.network.Resource
 
 class ContentRepository(
