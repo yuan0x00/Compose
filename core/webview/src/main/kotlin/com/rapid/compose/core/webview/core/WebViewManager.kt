@@ -115,7 +115,7 @@ class WebViewManager private constructor() {
         // 基础设置
         settings.javaScriptEnabled = config.javaScriptEnabled
         settings.domStorageEnabled = config.domStorageEnabled
-        settings.databaseEnabled = config.databaseEnabled
+//        settings.databaseEnabled = config.databaseEnabled
         settings.setSupportZoom(config.supportZoom)
         settings.builtInZoomControls = config.builtInZoomControls
         settings.displayZoomControls = config.displayZoomControls

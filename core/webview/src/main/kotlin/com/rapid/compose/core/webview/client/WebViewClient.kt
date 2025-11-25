@@ -1,6 +1,8 @@
 package com.rapid.compose.core.webview.client
 
 import android.graphics.Bitmap
+import android.webkit.WebResourceError
+import android.webkit.WebResourceRequest
 import android.webkit.WebView
 import android.webkit.WebViewClient
 import com.rapid.compose.core.webview.callback.WebViewCallback
@@ -21,15 +23,12 @@ class CustomWebViewClient(
     }
 
     override fun onReceivedError(
-        view: WebView?,
-        errorCode: Int,
-        description: String?,
-        failingUrl: String?
+        view: WebView, request: WebResourceRequest, error: WebResourceError
     ) {
-        weakCallback.get()?.onReceivedError(errorCode, description, failingUrl)
+        weakCallback.get()?.onReceivedError(error.errorCode, error.description.toString(), request.url.toString())
     }
 
-    override fun shouldOverrideUrlLoading(view: WebView?, url: String?): Boolean {
-        return weakCallback.get()?.shouldOverrideUrlLoading(url) ?: false
+    override fun shouldOverrideUrlLoading(view: WebView, request: WebResourceRequest): Boolean {
+        return weakCallback.get()?.shouldOverrideUrlLoading(request.url.toString()) ?: false
     }
 }

@@ -58,13 +58,13 @@ class WebViewActivity : AppCompatActivity(),
         }
     }
 
-    override fun onBackPressed() {
-        val fragment = supportFragmentManager.findFragmentById(R.id.container) as? WebViewFragment
+//    override fun onBackPressed() {
+//        val fragment = supportFragmentManager.findFragmentById(R.id.container) as? WebViewFragment
 //        if (fragment?.goBack() == true) {
 //            return
 //        }
-        super.onBackPressed()
-    }
+//        super.onBackPressed()
+//    }
 
     // ============ Fragment 回调接口 ============
 

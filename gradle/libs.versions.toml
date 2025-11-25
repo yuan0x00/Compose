@@ -30,7 +30,7 @@ espresso = "3.7.0"
 android-tools = "31.13.1"
 appcompat = "1.7.1"
 material = "1.13.0"
-
+koin = "4.1.1"
 
 [libraries]
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
@@ -60,6 +60,7 @@ androidx-room-compiler = { module = "androidx.room:room-compiler", version.ref =
 androidx-camera-camera2 = { module = "androidx.camera:camera-camera2", version.ref = "androidx-camera" }
 androidx-camera-lifecycle = { module = "androidx.camera:camera-lifecycle", version.ref = "androidx-camera" }
 androidx-camera-view = { module = "androidx.camera:camera-view", version.ref = "androidx-camera" }
+koin-androidx-compose = { module = "io.insert-koin:koin-androidx-compose", version.ref = "koin" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 material-icons-extended = { module = "androidx.compose.material:material-icons-extended", version.ref = "material-icons-extended" }
 accompanist-permissions = { module = "com.google.accompanist:accompanist-permissions", version.ref = "accompanist" }
@@ -87,7 +88,6 @@ android-gradle-plugin = { module = "com.android.tools.build:gradle", version.ref
 android-tools-common = { module = "com.android.tools:common", version.ref = "android-tools" }
 kotlin-gradle-plugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
 ksp-gradle-plugin = { module = "com.google.devtools.ksp:com.google.devtools.ksp.gradle.plugin", version.ref = "ksp" }
-
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

@@ -1,0 +1,13 @@
+package com.rapid.compose.di
+
+import com.rapid.compose.core.data.repository.user.UserRepository
+import com.rapid.compose.ui.screen.ProxySettingsViewModel
+import org.koin.core.module.dsl.singleOf
+import org.koin.core.module.dsl.viewModelOf
+import org.koin.dsl.module
+
+val appModule = module {
+    singleOf(::UserRepository)
+    viewModelOf(::ProxySettingsViewModel)
+//    factoryOf(::UserStateHolder)
+}
