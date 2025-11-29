@@ -7,9 +7,11 @@ import androidx.compose.runtime.livedata.observeAsState
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import org.koin.androidx.compose.koinViewModel
 
 @Composable
-fun ProxySettingsScreen(viewModel: ProxySettingsViewModel) {
+fun ProxySettingsScreen() {
+    val viewModel: ProxySettingsViewModel = koinViewModel()
     val config by viewModel.proxyConfig.observeAsState()
 
     var enabled by remember { mutableStateOf(config?.enabled ?: false) }

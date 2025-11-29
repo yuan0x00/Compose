@@ -9,9 +9,6 @@ import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.GlobalContext.startKoin
 
-/**
- * 应用程序入口
- */
 class MainApplication : Application() {
 
     override fun onCreate() {
