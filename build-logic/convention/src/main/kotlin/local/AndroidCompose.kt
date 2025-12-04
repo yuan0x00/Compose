@@ -45,7 +45,8 @@ internal fun Project.configureAndroidCompose(
                 "androidx-compose-ui-graphics",
                 "androidx-compose-ui-tooling-preview",
                 "androidx-compose-material3",
-                "material-icons-extended"
+                "material",
+                "material-icons-extended",
             ).forEach { alias ->
                 add("implementation", libs.findLibrary(alias).get())
             }
