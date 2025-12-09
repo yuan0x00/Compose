@@ -1,4 +1,4 @@
-package com.rapid.compose.ui.screen
+package com.rapid.compose.viewmodel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
